@@ -1,0 +1,28 @@
+header.header 
+  img.logoimage(src='/img/logo.png' alt='Logo')
+  nav 
+    ul.headerlist 
+      li.headerHeading 
+        a.headerlink(href='#') Home
+      li.headerHeading 
+        a.headerlink(href='#') ChatBot
+      li.headerHeading 
+        a.headerlink(href='#') About Us
+      li.headerHeading 
+        a.headerlink(href='#') Terms and Conditions
+      li.headerHeading 
+        a.headerlink(href='#') Contact Us
+  if user 
+    .buttons
+      button.loginbutton
+        a.loginbutton(href='/userProfile') Update Profile
+      button.loginbutton
+        a.loginbutton(href='/api/v1/users/logout') Logout
+      button.loginbutton
+        a.loginbutton(href='/findFriend') Suggest Friends
+  else
+    .buttons
+      button.loginbutton
+        a.loginbutton(href='/login') Login
+      button.loginbutton
+        a.loginbutton(href='/signup') Sign Up

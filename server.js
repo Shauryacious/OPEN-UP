@@ -15,6 +15,7 @@ const db = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
+//CONNECTION TO DATABASE
 mongoose
   .connect(db, {
     useNewUrlParser: true,
@@ -22,7 +23,7 @@ mongoose
     useFindAndModify: false,
   })
   .then((con) => {
-    console.log(con.connections);
+    //console.log(con.connections);
     console.log("DB connection succesful!");
   });
 
